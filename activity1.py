@@ -6,9 +6,6 @@ print(image.shape)
 # Rename the Window Name
 window_name = "Original Image"
 
-# Get the image value of a pixel at (x,y) coordinate (0,0) 
-
-
 # Open an IMREAD_COLOR Image
 image1 = cv2.imread("profile.jpg",1)
 print(image1.shape)
