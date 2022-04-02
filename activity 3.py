@@ -13,8 +13,6 @@ def display_img(img, name):
     cv2.destroyAllWindows()
 
 # function that plot the histogram of 2 different images
-
-
 def plot_histogram(img, name):
     hist = cv2.calcHist([img], [0], None, [256], [0, 256])
     plt.plot(hist, label=name, alpha=0.7, linewidth=1)
@@ -62,15 +60,15 @@ def display_histogram(img):
     plt.title('Original Image')
     plt.xticks([]), plt.yticks([])
     plt.subplot(2, 2, 2)
-    plt.plot(b)
+    plt.hist(b.ravel(), 256, [0, 256])
     plt.title('Blue Channel')
     plt.xticks([]), plt.yticks([]) # locates the x-axis ticks and y-axis ticks
     plt.subplot(2, 2, 3)
-    plt.plot(g)
+    plt.hist(g.ravel(), 256, [0, 256])
     plt.title('Green Channel')
     plt.xticks([]), plt.yticks([])
     plt.subplot(2, 2, 4)
-    plt.plot(r)
+    plt.hist(r.ravel(), 256, [0, 256])
     plt.title('Red Channel')
     plt.xticks([]), plt.yticks([])
     plt.show()
