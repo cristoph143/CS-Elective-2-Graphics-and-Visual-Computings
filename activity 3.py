@@ -57,7 +57,6 @@ def plot_channels(img):
 # The histograms of the three channels are displayed in the same figure.
 def display_histogram(img):
     b, g, r = separate_channels(img)
-    color = b, g, r
     plt.subplot(2, 2, 1)
     plt.imshow(img)
     plt.title('Original Image')
